@@ -1,5 +1,68 @@
-<html>
-  <body>
-    <p>hello world.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zachary Taylor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['Georgia', 'Times New Roman', 'serif'],
+          },
+          colors: {
+            paper: '#faf9f7',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-serif bg-paper text-zinc-800 leading-relaxed min-h-screen px-6 py-12">
+  <main class="max-w-xl mx-auto">
+    <h1 class="text-3xl font-normal tracking-wide text-zinc-900 mb-6">
+      Zachary Taylor
+    </h1>
+
+    <p class="text-zinc-600 mb-8">
+      A place for my stuff.
+    </p>
+
+    <p class="text-sm mb-10">
+      <a href="https://x.com/ztaylor" class="text-zinc-500 border-b border-zinc-300 hover:border-zinc-500 transition-colors">@ztaylor</a>
+      <span class="mx-3 text-zinc-300">/</span>
+      <span id="email"></span>
+    </p>
+
+    <h2 class="text-sm font-normal uppercase tracking-widest text-zinc-400 mb-4">
+      Projects
+    </h2>
+
+    <ul class="space-y-4">
+      <li>
+        <a href="https://artbreak.com" class="text-zinc-800 border-b border-zinc-200 hover:border-zinc-500 transition-colors">Artbreak</a>
+        <span class="block text-sm text-zinc-500 mt-1">The portfolio platform built for original artists.</span>
+      </li>
+      <li>
+        <a href="https://github.com/ztaylor/ztaylor-skills" class="text-zinc-800 border-b border-zinc-200 hover:border-zinc-500 transition-colors">idea-consultant</a>
+        <span class="block text-sm text-zinc-500 mt-1">A Claude Code skill that transforms any business or product idea into a comprehensive development framework with expert consultation documents.</span>
+      </li>
+    </ul>
+  </main>
+
+  <script>
+    (function() {
+      var e = document.getElementById('email');
+      var a = document.createElement('a');
+      var u = 'zachary.taylor';
+      var d = 'gmail.com';
+      a.href = 'mail' + 'to:' + u + '@' + d;
+      a.textContent = u + '@' + d;
+      a.className = 'text-zinc-500 border-b border-zinc-300 hover:border-zinc-500 transition-colors';
+      e.parentNode.replaceChild(a, e);
+    })();
+  </script>
+</body>
 </html>
